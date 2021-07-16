@@ -31,10 +31,6 @@ Make sure the cloned folders will be in the same folder where you have installed
 
 After cloning the UWC Sphinx documentation project from Git, the following folders will be available:
  
-* sphinxenv: This is the folder in which the virtual Python environment is installed. In this same folder we can follow the command for virtual Python environment or creating a  separate folder by following the steps as mentioned in the prerequisites section.
-
-* UWC: This is the actual project folder of the UWC documentation project.
-
 * source: This folder contains all the .rst files that we want to convert into HTML format to view the documentation.
   This directory also contains the default conf.py file with the most useful configuration values.
   We can update this conf.py file to fit our requirements.
