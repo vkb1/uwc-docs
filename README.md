@@ -43,7 +43,7 @@ After cloning the UWC Sphinx documentation project from Git, the following folde
   in the UWC documentation. To add new images or tables, keep the .png or .jpg files of the images or tables in the Doc_Images folder and 
   then add this image using the proper syntax in the .rst file wherever required.
 
-* build: This is the output folder. This folder containes all the created html files after building the project.
+* docs: This is the output folder. This folder containes all the created html files after building the project.
   To see the created documentation, open the index.html file.
 
 * Use uniform underlines for headings in all files and keep track of indentations, whitespace and blank lines in the RST file.
