@@ -84,6 +84,14 @@ This will download kernel manually or use following command to download it from 
 
   *$ gzip -cd ../patch-4.19.72-rt26.patch.gz | patch -p1 --verbose*
 
+.. note::
+
+    The UWC Software has been tested with ubuntu OS 18.04.3 LTS version, the aforementioned ubuntu kernel version (4.19.72) & the corresponding RT kernel patch (patch-4.19.72-rt26). 
+    If users have a different version of ubuntu 18.04.X LTS version (where "X' can change based on the version of 18.04 being downloaded), then kindly check the corresponding kernel
+    version of the ubuntu and map it with the right RT kernel patch. Use the same steps as above to download & patch kernel & RT patches.
+    Can refer to the links "https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/", "https://mirrors.edge.kernel.org/pub/linux/kernel/" for mapping kernel version with RT kernel patch
+
+
 5.	Launch the graphical UI for setting configurations
 
 The next command launches a graphical menu in the terminal to generate the .config file.
