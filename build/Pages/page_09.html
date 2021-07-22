@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.0 Debugging steps &mdash;   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.0 Error Codes" href="page_10.html" />
+    <link rel="prev" title="8.0 Sparkplug-Bridge Operations" href="page_08.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="First_pg.html">Legal Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_01.html">1.0  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_02.html">2.0  Before Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_03.html">3.0  Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_04.html">4.0  Container Configuration setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_05.html">5.0  Container Configuration setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_06.html">6.0  Site Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_07.html">7.0     UWC Modbus Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_08.html">8.0     Sparkplug-Bridge Operations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9.0     Debugging steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_10.html">10.0    Error Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_11.html">11.0    Steps to flash LFM BIOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_12.html">12.0    UWC Gateway to Cloud Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_13.html">13.0    Steps to Apply RT Patch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_14.html">14.0 Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html"></a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>9.0     Debugging steps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/page_09.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="debugging-steps">
+<h1>9.0     Debugging steps<a class="headerlink" href="#debugging-steps" title="Permalink to this headline">¶</a></h1>
+<p><strong>Checking logs</strong></p>
+<ol class="arabic simple">
+<li><p>Syntax - <em>sudo docker logs &lt;container_name&gt;</em></p></li>
+</ol>
+<p>e.g.:- To check modbus-tcp-container logs execute <em>“sudo docker logs modbus-tcp-container”</em> command.</p>
+<ol class="arabic simple" start="2">
+<li><p>Command to check logs inside the container <em>“sudo docker exec -it &lt;container_name&gt; bash”</em> and go to the “logs” directory using <em>“cd logs”</em>.</p></li>
+<li><p>Use <em>“cat &lt;log_file_name&gt;”</em> to see log file inside the container</p></li>
+<li><p>Copying logs from container to host machine</p></li>
+</ol>
+<blockquote>
+<div><p>Syntax - <em>docker cp &lt;container_name&gt;:&lt;file to copy from container&gt; &lt;file to be copied i.e., host directory&gt;</em></p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>To check the IP address of machine, use the <em>“ifconfig”</em> command.</p></li>
+<li><p>For Modbus RTU, to check attached COM port for serial communication, use the <em>“dmesg | grep tty”</em> command.</p></li>
+</ol>
+<p>Redirect docker logs to file including errors</p>
+<p><em>docker logs modbus-tcp-container &gt; docker.log 2&gt;&amp;1</em></p>
+<p><strong>Accessing container logs through docker volumes:</strong></p>
+<p>Go to docker volume directory using</p>
+<p><em>cd /opt/intel/eii/container_logs/&lt;container_name&gt;</em></p>
+<p>Where &lt;container name&gt; is directory name for each container (i.e. “modbus-tcp-master”, “modbus-rtu-master”, “mqtt-bridge”, and so on).</p>
+<p>Example to access container logs for modbus-tcp-master container,</p>
+<p><em>cd /opt/intel/eii/container_logs/modbus-tcp-master</em></p>
+<p><em>cat Modbus_App.log</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These logs are persisted across container/gateway restart.</p>
+</div>
+<p><strong>Steps to apply new configuration (i.e., YML files)</strong></p>
+<p>Once YML files/docker-compose.yml are changed/Modified in <em>/opt/intel/eii/uwc_data</em> directory then, execute following command to apply new configurations,</p>
+<p><em>sudo ./05_applyConfigChanges.sh</em></p>
+<p><strong>How to bring up/down UWC containers</strong></p>
+<p><em>docker-compose down</em> - bring down all containers</p>
+<p><em>docker-compose up</em> - bring up all containers</p>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page_10.html" class="btn btn-neutral float-right" title="10.0 Error Codes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page_08.html" class="btn btn-neutral float-left" title="8.0 Sparkplug-Bridge Operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, APP
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

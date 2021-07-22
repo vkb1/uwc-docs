@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.0 Steps to Apply RT Patch &mdash;   documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="14.0 Appendix" href="page_14.html" />
+    <link rel="prev" title="12.0 UWC Gateway to Cloud Communication" href="page_12.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="First_pg.html">Legal Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_01.html">1.0  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_02.html">2.0  Before Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_03.html">3.0  Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_04.html">4.0  Container Configuration setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_05.html">5.0  Container Configuration setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_06.html">6.0  Site Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_07.html">7.0     UWC Modbus Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_08.html">8.0     Sparkplug-Bridge Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_09.html">9.0     Debugging steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_10.html">10.0    Error Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_11.html">11.0    Steps to flash LFM BIOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_12.html">12.0    UWC Gateway to Cloud Communication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13.0    Steps to Apply RT Patch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-prerequisites">13.1    Install prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts-for-menuconfig-ui">13.2    Keyboard shortcuts for menuconfig UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steps-to-apply-preempt-rt-patch">13.3    Steps to apply PREEMPT_RT patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">13.4    References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_14.html">14.0 Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html"></a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>13.0    Steps to Apply RT Patch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/page_13.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="steps-to-apply-rt-patch">
+<h1>13.0    Steps to Apply RT Patch<a class="headerlink" href="#steps-to-apply-rt-patch" title="Permalink to this headline">¶</a></h1>
+<section id="install-prerequisites">
+<h2>13.1    Install prerequisites<a class="headerlink" href="#install-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Install all the prerequisites using the following command</p>
+<p><em>sudo apt-get install -y libncurses-dev libssl-dev bison flex</em></p>
+<p><em>build-essential wget</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It will prompt to update package runtime, click Yes to proceed with the update.</p>
+</div>
+</section>
+<section id="keyboard-shortcuts-for-menuconfig-ui">
+<h2>13.2    Keyboard shortcuts for menuconfig UI<a class="headerlink" href="#keyboard-shortcuts-for-menuconfig-ui" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Task/Use</p></th>
+<th class="head"><p>Keyboard Key</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>To select specific kernel feature</p></td>
+<td><p>Space bar</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>To come out of current window</p></td>
+<td><p>Esc Esc</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>To save current setting</p></td>
+<td><p>Click on &lt;save&gt; button</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Exit</p></td>
+<td><p>Click on &lt;exit&gt; button</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="steps-to-apply-preempt-rt-patch">
+<h2>13.3    Steps to apply PREEMPT_RT patch<a class="headerlink" href="#steps-to-apply-preempt-rt-patch" title="Permalink to this headline">¶</a></h2>
+<p>This section provides steps to apply PREEMPT_RT patch</p>
+<p><strong>Steps:</strong></p>
+<ol class="arabic simple">
+<li><p>Make a working directory on system</p></li>
+</ol>
+<p><em>$ mkdir ~/kernel &amp;&amp; cd ~/kernel</em></p>
+<ol class="arabic simple" start="2">
+<li><p>Download kernel in ~kernel directory created in step 1</p></li>
+</ol>
+<ul class="simple">
+<li><p>Download kernel manually</p></li>
+</ul>
+<p><strong>Link for download</strong> - <a class="reference external" href="https://www.kernel.org/pub/linux/kernel/">https://www.kernel.org/pub/linux/kernel/</a></p>
+<p>This will download kernel manually or use following command to download it from command line inside current directory.</p>
+<p><em>$ wget https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.19.72.tar.gz</em></p>
+<p><strong>Recommendation:</strong> Please get Linux kernel version 4.19.72</p>
+<ul class="simple">
+<li><p>Download preempt RT patch</p></li>
+</ul>
+<p><strong>Link for download -</strong> <a class="reference external" href="https://www.kernel.org/pub/linux/kernel/projects/rt/">https://www.kernel.org/pub/linux/kernel/projects/rt/</a> this will download patch manually or use following command to download it from command line inside current directory.</p>
+<p><em>wget https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/4.19/older/patch-4.19.72-rt26.patch.gz</em></p>
+<p><strong>Recommendation:</strong> Please get PREEMPT_RT version 4.19.72-rt26</p>
+<ol class="arabic simple" start="3">
+<li><p>Unzip the kernel using following command</p></li>
+</ol>
+<p><em>$ tar -xzvf linux-4.19.72.tar.gz</em></p>
+<ol class="arabic simple" start="4">
+<li><p>Patch the kernel</p></li>
+</ol>
+<p><em>$ cd linux-4.19.72</em></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>*$ gzip -cd ../patch-4.19.72-rt26.patch.gz <span class="p">|</span> patch -p1 --verbose*
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The UWC Software has been tested with ubuntu OS 18.04.3 LTS version, the aforementioned ubuntu kernel version (4.19.72) &amp; the corresponding RT kernel patch (patch-4.19.72-rt26).
+If users have a different version of ubuntu 18.04.X LTS version (where “X’ can change based on the version of 18.04 being downloaded), then kindly check the corresponding kernel
+version of the ubuntu and map it with the right RT kernel patch. Use the same steps as above to download &amp; patch kernel &amp; RT patches.
+Can refer to the links “<a class="reference external" href="https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/">https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/</a>”, “<a class="reference external" href="https://mirrors.edge.kernel.org/pub/linux/kernel/">https://mirrors.edge.kernel.org/pub/linux/kernel/</a>” for mapping kernel version with RT kernel patch</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Launch the graphical UI for setting configurations</p></li>
+</ol>
+<p>The next command launches a graphical menu in the terminal to generate the .config file.</p>
+<p><em>$ make menuconfig</em></p>
+<p><strong>Graphical UI is shown below:</strong></p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/image9.png"><img alt="../_images/image9.png" src="../_images/image9.png" style="width: 655.8px; height: 409.8px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11.1: Main launching screen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Select the preemption model as Basic RT using tab key on keyboard</p></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select and enter on “General setup” option.</p></li>
+<li><p>Select and Enter on Preemption Model (Voluntary Kernel Preemption (Desktop))</p></li>
+<li><p>Select and Enter on Preemption Model (Fully Preemptible Kernel (RT))</p></li>
+<li><p>After successful selection click on save button and then come back to main page using Esc button on keyboard.</p></li>
+</ol>
+</div></blockquote>
+<p>Refer the following screen capture for more details</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/image10.png"><img alt="../_images/image10.png" src="../_images/image10.png" style="width: 773.4px; height: 400.2px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11.2: Preemption Model (Voluntary Kernel Preemption (Desktop))</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/image11.png"><img alt="../_images/image11.png" src="../_images/image11.png" style="width: 580.1999999999999px; height: 301.8px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11.3: Preemption Model (Fully Preemptible Kernel (RT))</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/image12.png"><img alt="../_images/image12.png" src="../_images/image12.png" style="width: 624.0px; height: 309.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11.4 Fully Preemption Kernel (RT)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Save and exit</p>
+<p>To save the current setting click on <em>&lt;save&gt;</em> button and then exit the UI using <em>&lt;exit&gt;</em> button.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/image13.png"><img alt="../_images/image13.png" src="../_images/image13.png" style="width: 667.8px; height: 325.8px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 11.5 Click on ‘OK’</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>Compile the kernel (Execute the following commands)</p></li>
+</ol>
+<p><em>$ make –j20</em></p>
+<p><em>$ sudo make INSTALL_MOD_STRIP=1 modules_install -j20</em></p>
+<p><em>$ sudo make install -j20</em></p>
+<ol class="arabic simple" start="8">
+<li><p>Verify and update Verify that initrd.img-4.19.72-rt26, vmlinuz-4.19.72-rt26, and config-4.19.72-rt26 are generated in /boot directory and update the grub.</p></li>
+</ol>
+<p><em>$ cd /boot</em></p>
+<p><em>$ ls</em></p>
+<p><em>$ sudo update-grub</em></p>
+<p>Verify that there is a menuentry containing the text “menuentry ‘Ubuntu, with Linux 4.9.72-rt26’” in <em>/boot/grub/grub.cfg</em> file</p>
+<p>To change default kernel in grub, edit the <em>GRUB_DEFAULT</em> value in <em>/etc/default/grub</em> to your desired kernel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>0 is the 1st menuentry</p>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Reboot and verify using command</p></li>
+</ol>
+<p><em>$ sudo reboot</em></p>
+<p>Once the system reboots, open the terminal and use uname -a to check the kernel version</p>
+<p>Command will show below output for successfully applied RT patch –
+<em>Linux ubuntu 4.19.72-rt26 #1 SMP PREEMPT RT Tue Mar 24 17:15:47 IST 2020 x86_64 x86_64 x86_64 GNU/Linux</em></p>
+</section>
+<section id="references">
+<h2>13.4    References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://stackoverflow.com/questions/56189710/how-to-enable-config-rt-group-sched-in-ubuntu-to-make-it-rt">https://stackoverflow.com/questions/56189710/how-to-enable-config-rt-group-sched-in-ubuntu-to-make-it-rt</a></p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/51669724/install-rt-linux-patch-for-ubuntu">https://stackoverflow.com/questions/51669724/install-rt-linux-patch-for-ubuntu</a></p>
+<p><a class="reference external" href="https://unix.stackexchange.com/questions/270390/how-to-reduce-the-size-of-the-initrd-when-compiling-your-kernel/270418">https://unix.stackexchange.com/questions/270390/how-to-reduce-the-size-of-the-initrd-when-compiling-your-kernel/270418</a></p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page_14.html" class="btn btn-neutral float-right" title="14.0 Appendix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page_12.html" class="btn btn-neutral float-left" title="12.0 UWC Gateway to Cloud Communication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, APP
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
