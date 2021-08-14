@@ -29,12 +29,10 @@ jobs:
         touch build/.nojekyll
     - name: Deploy the docs
       run: |
-        mkdir repo
-        mv build/ $HOME/repo/docs
-        cd $HOME/repo
-        git init
+        git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/ --branch gh-pages --single-branch
+        cp -r build/* docs/
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@github.com"
         git add .
         git commit -m "latest html output"
-        git push -f https://${GITHUB_ACTOR}:${{secrets.ACCESS_TOKEN}}@github.com/vkb1/uwc-docs.git HEAD:gh-pages
+        git push -f https://${GITHUB_ACTOR}:${{secrets.ACCESS_TOKEN}}@github.com/$GITHUB_REPOSITORY HEAD:gh-pages
