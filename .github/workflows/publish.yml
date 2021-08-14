@@ -25,7 +25,12 @@ jobs:
       run: |
         export PATH="$HOME/.local/bin:$PATH"
         sphinx-build -t html source build
-        touch build/html/.nojekyll
+        ls -al
+        echo "build"
+        ls -al build
+        echo "build/html"
+        ls -al build/html
+        # touch build/html/.nojekyll
     - name: Deploy the docs
       run: |
         mv build/html $HOME/docs
