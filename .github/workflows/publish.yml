@@ -25,15 +25,10 @@ jobs:
       run: |
         export PATH="$HOME/.local/bin:$PATH"
         sphinx-build -t html source build
-        ls -al
-        echo "build"
-        ls -al build
-        echo "build/html"
-        ls -al build/html
-        # touch build/html/.nojekyll
+        touch build/.nojekyll
     - name: Deploy the docs
       run: |
-        mv build/html $HOME/docs
+        mv build/ $HOME/docs
         cd $HOME/
         git init
         git config --global user.name "${GITHUB_ACTOR}"
