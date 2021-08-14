@@ -1,4 +1,4 @@
-name: Deploy
+name: Publish
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
@@ -29,7 +29,7 @@ jobs:
         touch build/.nojekyll
     - name: Deploy the docs
       run: |
-        cur_dir=`pwd
+        cur_dir=`pwd`
         git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/ --branch gh-pages --single-branch
         cp -r $cur_dir/build/* docs/
         git config --global user.name "${GITHUB_ACTOR}"
