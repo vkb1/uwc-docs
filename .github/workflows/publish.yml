@@ -10,6 +10,7 @@ on:
       - gh-pages
   # Also trigger on page_build, as well as release created events
   page_build:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,11 +29,12 @@ jobs:
         touch build/.nojekyll
     - name: Deploy the docs
       run: |
-        mv build/ $HOME/docs
-        cd $HOME/
+        mkdir repo
+        mv build/ $HOME/repo/docs
+        cd $HOME/repo
         git init
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@github.com"
         git add .
         git commit -m "latest html output"
-        git push -f https://${GITHUB_ACTOR}:${{secrets.ACCESS_TOKEN}}@github.com/intel/stacks.git HEAD:gh-pages
+        git push -f https://${GITHUB_ACTOR}:${{secrets.ACCESS_TOKEN}}@github.com/vkb1/uwc-docs.git HEAD:gh-pages
