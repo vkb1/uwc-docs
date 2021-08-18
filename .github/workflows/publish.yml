@@ -26,7 +26,8 @@ jobs:
     - name: Deploy the docs
       run: |
         cur_dir=`pwd`
-        git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/ --branch gh-pages --single-branch
+        cd $HOME
+        git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/ --branch main --single-branch
         cp -r $cur_dir/build/* docs/
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@github.com"
