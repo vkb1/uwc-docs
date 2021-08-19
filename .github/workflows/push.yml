@@ -1,6 +1,6 @@
 name: Push
 on:
-  # Trigger the workflow on pull request,
+  # Trigger the workflow on push,
   # but only for the main branch
   push:
     branches:
